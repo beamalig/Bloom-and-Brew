@@ -828,9 +828,10 @@ body {
   height: 100%;
 }
 .tutorial-card img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;    
+  display: block;
 }
 .tutorial-text {
   display: flex;
@@ -841,11 +842,12 @@ body {
   color: #2C2C2C;
   font-style: italic;
   font-weight: bold;
+  margin-top: 1rem;
 }
 .tutorial-text h3 {
   font-family: "Libre Baskerville", serif;
   font-size: 1.2rem;
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0 0.2rem;
 }
 .tutorial-text p {
   font-size: 0.95rem;
@@ -860,8 +862,8 @@ body {
   color: #4C7C59;
   font-weight: 600;
   text-decoration: none;
-  padding: 0.5rem 1.2rem;
-  border-radius: 999px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
   background: transparent;
 }
 .read-more-btn:hover {
@@ -872,10 +874,17 @@ body {
 /* === REMEDIES PAGES === */
 /* Hero Sections */
 .hero-left {
-  padding: 3rem;
+  padding: 4rem 6rem; 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
+}
+.hero-right {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .hero-category {
   font-size: 0.9rem;
@@ -896,33 +905,20 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
-
-/* Peppermint Digestive Tea Hero */
-.peppermint-digestive-tea-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: #8B5E3C;
-  color: #FAF9F6;
-  min-height: 340px;
-}
-
-/* Echinacea Immunity Tincture Hero */
-.echinacea-immunity-tincture-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: #8B5E3C;
-  color: #FAF9F6;
-  min-height: 340px;
-}
-
-/* Calendula Healing Salve Hero */
+.peppermint-digestive-tea-hero,
+.echinacea-immunity-tincture-hero,
 .calendula-healing-salve-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #8B5E3C;
   color: #FAF9F6;
-  min-height: 340px;
+  min-height: 500px;
+  align-items: center; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 /* Tutorial Sections */
@@ -964,14 +960,12 @@ hr {
 /* Read More Sections */
 .read-more-section {
   background-color: #9DBF9E;
-  padding: 4rem 0;
   font-family: "IBM Plex Sans", sans-serif;
   color: #FAF9F6;
 }
 .remedies-inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 .remedies-title {
   font-family: "Libre Baskerville", serif;
@@ -981,19 +975,20 @@ hr {
 }
 .remedies-grid {
   display: flex;
+  flex-wrap: nowrap; 
   justify-content: space-between;
-  align-items: flex-start;
   gap: 2rem;
 }
 .remedy-card {
-  width: 32%;
+  flex: 0 1 32%; 
+  max-width: 32%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .remedy-card img {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   margin-bottom: 0.8rem;
 }
@@ -1235,13 +1230,6 @@ hr {
     grid-template-columns: 1fr;
     padding: 2rem;
   }
-  .remedies-grid {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .remedy-card {
-    width: 100%;
-  }
     
   /* Shop Page */
   .products-table,
@@ -1392,6 +1380,43 @@ hr {
   .tutorials {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .peppermint-digestive-tea-hero,
+  .echinacea-immunity-tincture-hero,
+  .calendula-healing-salve-hero {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 0; 
+    padding: 0; 
+  }
+  .hero-right {
+    order: -1; 
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+    margin-left: calc(-50vw + 50%);
+  }
+  .hero-right img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-left {
+    height: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .remedies-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .remedy-card {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
   /* Shop */
