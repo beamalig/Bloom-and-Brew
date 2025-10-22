@@ -317,11 +317,11 @@ header {
   color: #FAF9F6;
 }  
 
-/* === HOME PAGE === */
+/* === index PAGE === */
 /* Hero Section */
 .hero {
   position: relative;
-  background: url('resources/hero/home-hero-image.png') center center / cover no-repeat;
+  background: url('resources/hero/index-hero-image.png') center center / cover no-repeat;
   height: 530px;          
   min-height: 530px;      
   max-height: 530px;      
@@ -1166,7 +1166,7 @@ hr {
     gap: 20px;
   }
   
-  /* Home Page */
+  /* index Page */
   .hero {
     height: 400px;
     padding: 0 10%;
@@ -1316,7 +1316,7 @@ hr {
     height: auto;
   }
 
-  /* Home */
+  /* index */
   .hero p{
     font-size: 16px;
   }
