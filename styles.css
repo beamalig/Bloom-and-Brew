@@ -321,7 +321,7 @@ header {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url('resources/hero/index-hero-image.png') center center / cover no-repeat;
+  background: url('resources/hero/home-hero-image.png') center center / cover no-repeat;
   height: 530px;          
   min-height: 530px;      
   max-height: 530px;      
